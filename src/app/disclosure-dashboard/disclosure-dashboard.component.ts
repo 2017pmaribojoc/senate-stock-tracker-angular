@@ -15,7 +15,7 @@ export class DisclosureDashboardComponent implements OnInit {
 
   ngOnInit() {
     this.stockTrackerService.getStockTransactions().subscribe(data => {
-      this.transactions = data['transactions'];
+      this.transactions = data['transactions'].slice(0, 10);
     });      
   }
 

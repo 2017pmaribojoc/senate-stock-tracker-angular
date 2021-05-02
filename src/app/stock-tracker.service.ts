@@ -13,4 +13,5 @@ export class StockTrackerService {
   getStockTransactions(): Observable<any> {
     return this.httpClient.get("assets/transactions.json");
   }
+
 }

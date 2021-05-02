@@ -1,7 +1,9 @@
 <h2>Senate Stock Transactions</h2>
 <ul>
     <li *ngFor="let transaction of transactions">
-            {{transaction.senator}} |  {{transaction.transactionAmount}} | {{transaction.issuer}} 
-            | {{transaction.transactionDate}} | {{transaction.transactionType}}
+            <a routerLink="/detail/{{transaction.senator}}"><span>{{transaction.senator}} |  {{transaction.transactionAmount}} | {{transaction.issuer}} 
+                    | {{transaction.transactionDate}} | {{transaction.transactionType}}</span></a>
+
+            
     </li>
 </ul>
